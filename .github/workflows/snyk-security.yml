@@ -13,7 +13,7 @@ jobs:
         uses: snyk/actions/maven@master
         continue-on-error: true # To make sure that SARIF upload gets called
         env:
-          SNYK_TOKEN: ${{ secrets.SNYK_SECRET }}
+          SNYK_TOKEN: 239f7ada-30f8-47b7-904e-f3cf7fec5719
         with:
           args: --sarif-file-output=snyk.sarif
       #- name: Snyk IaC test and report
