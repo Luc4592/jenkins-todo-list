@@ -19,9 +19,9 @@ jobs:
       #- name: Snyk IaC test and report
       #  run: snyk iac test --report # || true
       - name: Build a Docker image
-        run: docker build -t your/image-to-test .
+        run: docker build -t snyk/snyk:alpine .
       - name: Snyk Container monitor
-        run: snyk container monitor your/image-to-test --file=Dockerfile
+        run: snyk container monitor snyk/snyk:alpine --file=Dockerfile
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
