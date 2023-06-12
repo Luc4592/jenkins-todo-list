@@ -1,7 +1,7 @@
 ARG IMAGE
 ARG TAG
 
-FROM ${IMAGE} as parent
+FROM snyk/snyk:alpine as parent
 ENV MAVEN_CONFIG="" \
     SNYK_INTEGRATION_NAME="DOCKER_SNYK" \
     SNYK_INTEGRATION_VERSION=${TAG} \
