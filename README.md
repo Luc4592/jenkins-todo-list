@@ -22,12 +22,7 @@ Dillinger uses a number of open source projects to work properly:
 
 Install the dependencies and start the server.
 
-```sh
-$ cd django-todolist
-$ pip install -r requirements.txt
-$ python manage.py migrate # Running the migrations
-$ python manage.py createsuperuser # Create a superuser
-$ python manage.py runserver
+
 ```
 
 
