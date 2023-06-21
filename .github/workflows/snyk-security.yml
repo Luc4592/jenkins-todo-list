@@ -13,17 +13,5 @@ jobs:
         uses: snyk/actions/maven@master
         continue-on-error: true # To make sure that SARIF upload gets called
         env:
-          SNYK_TOKEN: 0fd4e620-072c-4db4-bef2-51951d71d734
-        with:
-          args: --sarif-file-output=snyk.sarif
-      #- name: Snyk IaC test and report
-      #  run: snyk iac test --report # || true
-      #- name: Build a Docker image
-      #  run: docker build -t snyk/snyk:alpine .
-      #- name: Snyk Container monitor
-      #  run: snyk container monitor snyk/snyk:alpine --file=Dockerfile
-
-      #- name: Upload result to GitHub Code Scanning
-      #  uses: github/codeql-action/upload-sarif@v2
-      #  with:
-      #    sarif_file: snyk-code.sarif
+          SNYK_TOKEN: b8696851-c357-4814-b572-a1456dabdf0b
+          
