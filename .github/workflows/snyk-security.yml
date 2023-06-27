@@ -1,13 +1,18 @@
-name: Snyk
-on: push
+
+name: Snyk Security
+on: 
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 jobs:
   security:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/maven@master
-        #continue-on-error: true # To make sure that SARIF upload gets called
+        uses: snyk/actions/maven-3-jdk-11@master
         env:
           SNYK_TOKEN: ee3f5a48-f938-45cb-a3ef-63ee5143a564
-
